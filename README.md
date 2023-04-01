@@ -1,8 +1,6 @@
 # tcxplot
 
-# tcxplot
-
-`tcxplot` is a Python command-line tool for processing TCX and GPX files and generating visualizations of the data. The tool uses Google Maps API to generate a map of the route and plots graphs of speed, heart rate, and elevation.
+`tcxplot` is a Python command-line tool for processing TCX and GPX files and generating visualizations of the data. The tool uses Google Maps API to generate a map of the route and plots graphs of heart rate, distance and speed.
 
 ## Installation
 
@@ -16,7 +14,7 @@
 
 `tcxplot` can be run from the command line with the following arguments:
 
-python tcxplot.py <data_folder> --output_dir=<output_dir> --key=<google_maps_api_key> [--gt=<ground_truth_device>] [--ref=<reference_device>] [--launch_browser=<True/False>] [--units=<metric/imperial>]
+python tcxplot.py <data_folder> --output_dir=<output_dir> --key=<google_maps_api_key> [--gt=<ground_truth_device>] [--ref=<reference_device>] [--no-launch_browser] [--units=<metric/imperial>]
 
 
 * `data_folder`: the path to the folder containing TCX/GPX files to be processed.
@@ -24,8 +22,8 @@ python tcxplot.py <data_folder> --output_dir=<output_dir> --key=<google_maps_api
 * `google_maps_api_key`: your Google Maps API key.
 * `ground_truth_device` (optional): the ground truth device for heart rate (default: Polar).
 * `reference_device` (optional): the reference device for heart rate (default: Apple).
-* `launch_browser` (optional): automatically launch the webview on the resulting HTML file (default: True).
-* `units` (optional): specifies the units of measure, options are metric or imperial (default: metric).
+* `no-launch_browser` (optional): disables the launch the webview on the resulting HTML file
+* `units` (optional): specifies the units of measure, options are metric or imperial (default: imperial).
 
 ## Examples
 
