@@ -37,6 +37,7 @@ def main():
     parser.add_argument('--gt', type=str, default='Polar', help='Specifies the ground truth device for heart rate (default: Polar)')
     parser.add_argument('--ref', type=str, default='Apple', help='Specifies the reference device (default: Apple)')
     parser.add_argument('--launch_browser', action='store_true', help='Automatically launch the webview on the resulting html file')
+    parser.add_argument('--no-launch_browser', dest='launch_browser', action='store_false', help='Do not launch the webview on the resulting html file')
     parser.add_argument('--units', type=str, default='metric', help='Specifies the units of measure. Options are metric or imperial (default: metric)')
 
     args = parser.parse_args()
