@@ -7,7 +7,7 @@ optional arguments:
   --gt: Ground Truth device (default: Polar)
   --ref: Ground Truth device (default: Apple)
   --key: Google Maps API key (default: None)
-  --no-launch_browser: disables the launch the webview on the resulting HTML file
+  --no_browser: disables the launch the webview on the resulting HTML file
   --units: determine the unit of measure; imperial or metric (default: imperial)
 """
 
@@ -36,7 +36,7 @@ def main():
     parser.add_argument('--key', type=str, help='Google maps API key, alternatively set env GOOGLE_MAPS_API_KEY')
     parser.add_argument('--gt', type=str, default='Polar', help='Specifies the ground truth device for heart rate (default: Polar)')
     parser.add_argument('--ref', type=str, default='Apple', help='Specifies the reference device (default: Apple)')
-    parser.add_argument('--no-launch_browser', dest='launch_browser', action='store_false', help='Do not launch the webview on the resulting html file')
+    parser.add_argument('--no_browser', dest='launch_browser', action='store_false', help='Do not launch the webview on the resulting html file')
     parser.add_argument('--units', type=str, default='imperial', help='Specifies the units of measure. Options are metric or imperial (default: imperial)')
 
     args = parser.parse_args()
