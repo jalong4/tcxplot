@@ -16,8 +16,7 @@ def get_heart_rate_metrics(combined_df, ground_truth_device):
   # Calculate metrics for each line
   rows = []
   # Calculate the average heart rate and variance for GT Device
-  gt_data = combined_df[combined_df['device'] == ground_truth_device]
-  gt_avg_heart_rate = round(gt_data['heart_rate'].mean(), 2)
+  gt_avg_heart_rate = round(ground_truth['heart_rate'].mean(), 2)
 
   rows.append({
       'Device': f'GT ({ground_truth_device})',

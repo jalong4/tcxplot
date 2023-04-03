@@ -22,7 +22,7 @@ python tcxplot.py <data_folder> --output_dir=<output_dir> --key=<google_maps_api
 * `google_maps_api_key`: your Google Maps API key.
 * `ground_truth_device` (optional): the ground truth device for heart rate (default: Polar).
 * `reference_device` (optional): the reference device for heart rate (default: Apple).
-* `no-launch_browser` (optional): disables the launch the webview on the resulting HTML file
+* `no_browser` (optional): disables the launch the webview on the resulting HTML file
 * `units` (optional): specifies the units of measure, options are metric or imperial (default: imperial).
 
 ## Examples
@@ -36,7 +36,7 @@ Generate output files for all TCX files in the `data` directory, with the result
 * `ground_truth_device` (optional): the ground truth device for heart rate (default: Polar).
 * `reference_device` (optional): the reference device for heart rate (default: Apple).
 * `launch_browser` (optional): automatically launch the webview on the resulting HTML file (default).
-* `no-launch_browser` (optional): Do not launch the webview on the resulting html file.
+* `no_browser` (optional): Do not launch the webview on the resulting html file.
 * `units` (optional): specifies the units of measure, options are metric or imperial (default: metric).
 
 ## Examples
