@@ -1,15 +1,12 @@
 """Process all TCX and GPS files in the given data folder."""
 
-
-from utils import calc_distance, calc_speed, combine_html, map_activity, parser, plot_distance, plot_heart_rate, plot_speed, utils
-
+import os
+import webbrowser
 
 import pandas as pd
 import plotly.io as pio
 
-
-import os
-import webbrowser
+from utils import calc_distance, calc_speed, combine_html, map_activity, parser, plot_distance, plot_heart_rate, plot_speed, utils
 
 
 def process_files(folder_path, output_dir, google_maps_api_key, launch_browser,

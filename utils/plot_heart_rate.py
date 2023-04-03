@@ -6,6 +6,7 @@ from sklearn.metrics import mean_absolute_error
 
 ZOOM_LEVEL = 16
 
+
 def get_heart_rate_metrics(combined_df, ground_truth_device):
   """Gets the summary metrics for heart rate data vs gt device."""
 
