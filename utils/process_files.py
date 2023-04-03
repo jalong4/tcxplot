@@ -50,7 +50,7 @@ def process_files(folder_path, output_dir, google_maps_api_key, launch_browser,
     ):
       df['calc_distance_meters'] = calc_distance.calc_distance_haversine(df)
       df['speed_kmh'] = calc_speed.calc_speed(df)
-    if sport:
+    if sport and sport != 'Unknown':
       sports.add(sport)
     if start_time:
       start_times.add(start_time)
@@ -58,10 +58,6 @@ def process_files(folder_path, output_dir, google_maps_api_key, launch_browser,
     file_name = os.path.splitext(os.path.basename(f))[0]
     df['device'] = file_name
     dfs.append(df)
-
-  # Check if all files are the same sport
-  if len(sports) > 1:
-    raise ValueError('All data files must be of the same sport.')
 
   sport = 'Unknown'
   if sports:
