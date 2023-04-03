@@ -15,11 +15,12 @@ import webbrowser
 def process_files(folder_path, output_dir, google_maps_api_key, launch_browser,
                   ground_truth_device, ref_device, unit_of_measure):
   """Process each data file in the data folder.
+
   Args:
     folder_path: Folder containing the data files
     output_dir: Folder to save the results
     google_maps_api_key: Required for the map output to render
-    launch_browser: determines if browser opens automatically (default: True)
+    launch_browser: determines if browser opens automatically
     ground_truth_device:  the string used to determine GT device
     ref_device:  the string used to determine the ref device
     unit_of_measure:  imperial or metric
