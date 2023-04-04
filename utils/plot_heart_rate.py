@@ -129,6 +129,8 @@ def plot_heart_rate(df, ground_truth_device, sport, start_time):
               values=['Device', 'MAE vs GT', 'Avg BPM', 'BPM vs GT'],
               fill_color='paleturquoise',
               align=['left', 'right', 'right', 'right'],
+              font=dict(size=14),
+              height=40
           ),
           cells=dict(
               values=[
@@ -139,8 +141,10 @@ def plot_heart_rate(df, ground_truth_device, sport, start_time):
               ],
               fill_color='lavender',
               align=['left', 'right', 'right', 'right'],
+              font=dict(size=12),
+              height=30
           ),
-          domain=dict(x=[0.65, 1.0], y=[0.05, 0.3]),
+          domain=dict(x=[0.6, 1.0], y=[0.01, 0.3]),
       )
   )
 

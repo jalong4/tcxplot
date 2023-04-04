@@ -118,7 +118,7 @@ def plot_distance(df, ref_device, sport, start_time, unit_of_measure):
   fig = go.Figure()
 
   # Set the y-axis range to start at 0
-  fig.update_layout(yaxis_range=[0, max_distance + 1])
+  fig.update_layout(yaxis_range=[0, max_distance * 1.25])
 
   # Filter the DataFrame to keep only rows with non-null position data
   df_with_position = df[
@@ -177,7 +177,7 @@ def plot_distance(df, ref_device, sport, start_time, unit_of_measure):
       go.Table(
           columnwidth=[2.5, 1, 1, 1],
           header=dict(
-              values=['Device', mae_label, distance_label_short, "+/-\t(%)"],
+              values=['Device', mae_label, distance_label_short, '+/-\t(%)'],
               fill_color='paleturquoise',
               align=['left', 'right', 'right', 'right'],
               font=dict(size=14),
@@ -196,7 +196,7 @@ def plot_distance(df, ref_device, sport, start_time, unit_of_measure):
               height=30
 
           ),
-          domain=dict(x=[0.6, 1.0], y=[0.05, 0.3]),
+          domain=dict(x=[0.6, 1.0], y=[0.01, 0.3]),
       )
   )
 
