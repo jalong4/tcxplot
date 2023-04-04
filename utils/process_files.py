@@ -56,9 +56,14 @@ def process_files(folder_path, output_dir, google_maps_api_key, launch_browser,
     df['device'] = file_name
     dfs.append(df)
 
-  sport = 'Unknown'
-  if sports:
-    sport = sports.pop()
+  if len(sports) == 1:
+      sport = sports.pop()
+  elif len(sports) >= 2:
+      if "Other" in sports:
+          sports.remove("Other")
+      sport = sports.pop()
+  elif len(sports) == 0:
+      sport = "Unknown"
 
   if start_times:
     start_time = start_times.pop()
